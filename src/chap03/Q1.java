@@ -2,16 +2,13 @@ package chap03;
 
 import java.util.Scanner;
 
-public class SeqSearchSen {
+public class Q1 {
     static int seqSearchSen(int[] a, int n, int key) {
-        int i = 0;
+        int i;
         a[n] = key;
 
-        while(true) {
-            if(a[i] == key)
-                break;
-            i++;
-        }
+        for(i= 0; a[i] != key; i++);
+
         return i == n ? -1 : i;
     }
 
